@@ -17,12 +17,16 @@ public class TekoalyParannettu implements Tekoaly {
 
     public void asetaSiirto(String siirto) {
         // jos muisti täyttyy, unohdetaan viimeinen alkio
-        if (vapaaMuistiIndeksi == muisti.length) {
+        if (muistiTaynna()) {
             siirraAlkiot();
             vapaaMuistiIndeksi--;
         }
         muisti[vapaaMuistiIndeksi] = siirto;
         vapaaMuistiIndeksi++;
+    }
+
+    private boolean muistiTaynna() {
+        return vapaaMuistiIndeksi == muisti.length;
     }
 
     public String annaSiirto() {
