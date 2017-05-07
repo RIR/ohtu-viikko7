@@ -11,16 +11,16 @@ public abstract class Peli {
     protected Kayttoliittyma kayttoliittyma;
     protected Tekoaly tekoaly;
 
-    public Peli() {
+    protected Peli() {
         this.kayttoliittyma = new Kayttoliittyma();
     }
 
-    public Peli(Tekoaly tekoaly) {
+    protected Peli(Tekoaly tekoaly) {
         this.tekoaly = tekoaly;
         this.kayttoliittyma = new Kayttoliittyma();
     }
 
-    public abstract void pelaa();
+    protected abstract void pelaa();
 
     protected boolean onOkSiirto(String siirto) {
         return siirto.equals("k") || siirto.equals("p") || siirto.equals("s");

@@ -14,13 +14,15 @@ public class Kaksinpeli extends Peli {
     public void pelaa() {
         Tuomari tuomari = new Tuomari();
         String eka,toka;
+        
         do {
             eka = kayttoliittyma.LueSiirto("eka");
+            if(!onOkSiirto(eka))break;
             toka = kayttoliittyma.LueSiirto("toka");
+             if(!onOkSiirto(toka))break;
             tuomari.kirjaaSiirrot(eka, toka);
             kayttoliittyma.tulostaTilanne(tuomari);
-
-        } while (onOkSiirto(eka) && onOkSiirto(toka));
+        } while (true);
 
         kayttoliittyma.tulostaLopputilanne(tuomari);
     }

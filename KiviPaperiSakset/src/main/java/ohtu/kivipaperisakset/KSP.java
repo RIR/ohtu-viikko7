@@ -9,7 +9,7 @@ import java.util.Map;
  */
 public class KSP {
 
-    public KSP() {
+    private KSP() {
     }
 
     public static Peli valitsePelimuoto(String pelimuoto) {
